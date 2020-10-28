@@ -10,13 +10,17 @@ div#image{
     float: right;
     border-radius: 3px;
     border-color: #ccc;
-    
+
 }
 div#info{
     display: inline;
+    margin-top: 51em;
 }
 #wrapper{
     max-width: 900px;
     min-width: 320px;
     margin: auto;
+}
+#presentation{
+    padding-right: 23em;
 }
