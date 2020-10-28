@@ -5,54 +5,50 @@
         <link rel="stylesheet" href="resume.css">
         <link rel="stylesheet" href="css/responsive.css">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrap.com/font-awesome/4.4.0/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <title>Mon CV</title>
         <meta name="description" content="A propos de moi">
         <meta name="keywords" content="web,developer,resume"/>
         <meta name="author" content="Mon nom">
         <meta name="viewport" content="width=device-width,initial-scale=1">
+        <script src="http://use.edgefonts.net/overlock-sc.js"></script>
         <!--[if lt IE 9]>
             <script src="html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
     </head>
     <body>
         <div itemscope itemtype="https://schema.org/Person" id="wrapper">
-            <header>
+            <header class="partie">
                 <div id="image" itemprop="image">
                     <img src="Avatar.jpg">
                 </div>
                 <div id="info">
-                <h1 itemprop="name">Yousra AHSAIEN</h1>
+                <h1 itemprop="name" id="name"><strong>Yousra AHSAIEN</strong></h1>
                 <h4 itemprop="description">Étudiante en Master Développement lOgiciel des Systèmes d'Information à l'UBO</h4>
-                <h4>13 novembre 1996</h4>
+                <h4>Née le 13 novembre 1996</h4>
+                <h4>+33 6 64 86 90 81</h4>
                 <h4>yousra.ahsaien@gmail.com</h4>
-                <h2></h2>
-            </div>
+                <h4>4, RUE DES ARCHIVES, 29200 BREST</h4>
+                </div>
     
             </header>
      
     
-    <div class="presentation">
-        <p id="presentation">Étudiante en 2ème année master « Développement lOgiciel des Systèmes d'Information », 
-            Diplômée en génie informatique avec des capacités de
-            leadership éprouvées, aime prendre des initiatives et chercher de
-            nouveaux défis. Passionnée d'ingénierie des données et de systèmes
-            intelligents.
-            Maîtrise d'une gamme de technologies modernes, dont Java et Apex.</p>
-        </div>
+
         <section>
-      <div class="experiences">
-          <h1>Experiences professionnelles</h1>
+      <div class="experiences partie">
+          <h1><strong>Experiences professionnelles</strong></h1>
           <div>
-          <div>
-              <h3>Développeur salesforce</h3>
+
+            <span><button type="button" onclick="afficherMasquer(id)" >+</button>
+              <h1>&nbsp;   Développeur salesforce</h1></span>
+            <div>
               <h4>DATA RESEARCH And RESULTS</h4>
               <h4>Juill 2019 - Mai 2020</h4>
-          </div>
-          <div>
-            <p>adapter l’outil Salesforce à des besoins spécifiques par du code le langage Apex pour la partie back officeet VisualForce et Lightning pour le front-office </p>
-          </div>
+              <p>adapter l’outil Salesforce à des besoins spécifiques par du code le langage Apex pour la partie back officeet VisualForce et Lightning pour le front-office </p>
+            </div>
         </div>
+
         <div>
             <div>
                 <h3>Responsable SEO et contenu</h3>
@@ -78,8 +74,8 @@
       </div>
     </section>
     <section>
-        <div class="formation">
-            <h1>Formation</h1>
+        <div class="formation partie">
+            <h1><strong>Formation</strong></h1>
             <div>
                 <div>
                     <h3>2020 - 2021</h3>
@@ -135,8 +131,8 @@
         </div>
     </section>
     <section>
-        <div class="competences">
-            <h1>Competences</h1>
+        <div class="competences partie">
+            <h1><strong>Competences</strong></h1>
             <div>
                 <h3>Langages de programmation:</h3>
                 <p>C#, Php, Python, Java, Apex, C, C++, TypeScript, JavaScript</p>
@@ -155,14 +151,18 @@
             </div>
         </div>
     </section>
-    <section>
-        <h1>Langues</h1>
+    <section class="partie">
+        <h1><strong>Langues</strong></h1>
         <div>
             <h4>Francais</h4>
             <h4>Anglais</h4>
             <h4>Arabe</h4>
         </div>
     </section>
-    </div>
+   
+    <footer class="partie">
+        <li><a href="https://www.facebook.com/yousra.ahsaien"><i class="fa fa-facebook-square" style="font-size:48px;color:blue"></i></a></li>
+    </footer>
+</div>
 </body>
 </html>

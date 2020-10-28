@@ -8,8 +8,15 @@ html{
 
 div#image{
     float: right;
+    border-color: black;
+    border: 1px;
+    padding: 10px;
 
 }
+@font-face {
+    font-family: "Bitstream Vera Serif Bold";
+    src: url("/static/styles/libs/font-awesome/fonts/fontawesome-webfont.fdf491ce5ff5.woff");
+  }
 div#info{
     display: inline;
     margin-top: 51em;
@@ -18,11 +25,40 @@ div#info{
     max-width: 900px;
     min-width: 320px;
     margin: auto;
+    border:1px solid black;
+    padding: 1em;
 }
 #presentation{
     padding-right: 23em;
 }
 img {
     border-radius: 50%;
-    
+    border:1px solid #ccc;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 240px;
   }
+span{
+    display: flex;
+    align-items: center;
+}
+body{
+    background-color: #7777773d;
+    color: black;
+    margin-right: auto;
+}
+#name{
+    font-family: new-spirit bold;
+    font-style: normal;
+    font-weight: 300;
+}
+h1{
+    font-family: new-spirit bold;
+    font-style: normal;
+    font-weight: 300;
+}
+.partie{
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 2em;
+    border: 1px solid black;
+}
