@@ -8,8 +8,6 @@ html{
 
 div#image{
     float: right;
-    border-radius: 3px;
-    border-color: #ccc;
 
 }
 div#info{
@@ -24,3 +22,7 @@ div#info{
 #presentation{
     padding-right: 23em;
 }
+img {
+    border-radius: 50%;
+    
+  }
