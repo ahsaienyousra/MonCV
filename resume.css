@@ -1,0 +1,22 @@
+html,button,input,select,textarea{
+    color: #444;
+}
+html{
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+div#image{
+    float: right;
+    border-radius: 3px;
+    border-color: #ccc;
+    
+}
+div#info{
+    display: inline;
+}
+#wrapper{
+    max-width: 900px;
+    min-width: 320px;
+    margin: auto;
+}
