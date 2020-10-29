@@ -138,25 +138,16 @@
                 <ul>
                     <li class="tooltip-item skill" data-message="C#">C#</li>
                     <li class="tooltip-item skill" data-message="php">Php</li>
-                    <li class="tooltip-item skill">Python</li>
-                    <li class="tooltip-item skill">Java</li>
-                    <li class="tooltip-item skill">Apex</li>
-                    <li class="tooltip-item skill">C</li>
-                    <li class="tooltip-item skill">C++</li>
-                    <li class="tooltip-item skill">TypeScript</li>
-                    <li class="tooltip-item skill">JavaScript</li>
-                    <li class="tooltip-item skill">SEO</li>
-                    <li class="tooltip-item skill">SalesForce</li>
-                    <li class="tooltip-item skill">Oracle</li>
-                    <li class="tooltip-item skill">MySQL</li>
-                    <li class="tooltip-item skill">Microsoft SQL Server</li>
-                    <li class="tooltip-item skill">MongoDB</li>
-                    <li class="tooltip-item skill">Photoshop</li>
-                    <li class="tooltip-item skill">Illustrator</li>
+                    <li class="tooltip-item skill" data-message="Python">Python</li>
+                    <li class="tooltip-item skill" data-message="Java">Java</li>
+                    <li class="tooltip-item skill" data-message="JavaScript">JavaScript</li>
+                    <li class="tooltip-item skill" data-message="SEO">SEO</li>
+                    <li class="tooltip-item skill" data-message="SalesForce">SalesForce</li>
                 </ul>
                 
                 
             </div>
+            <canvas id="chart" width="630" height="400"></canvas>
         </div>
     </section>
     <section class="partie">
@@ -168,8 +159,12 @@
         </div>
     </section>
    
-    <footer class="partie">
-        <li><a href="https://www.facebook.com/yousra.ahsaien"><i class="fa fa-facebook-square" style="font-size:48px;color:blue"></i></a></li>
+    <footer class="partie footer">
+        <ul>
+            <li><a href="https://www.facebook.com/yousra.ahsaien"><i class="fa fa-facebook-square" style="font-size:48px;color:blue"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/yousra-ahsaien/"><i class="fa fa-linkedin" style="font-size:48px;color: black;"></i></a></li>
+            <li><a href="https://github.com/ahsaienyousra"><i class="fa fa-github" style="font-size:48px;color:black"></i></a></li>
+        </ul>
     </footer>
 </div>
 
@@ -231,23 +226,13 @@ function toggle_visibility(id) {
 
       
      let skillRate=[
-         {name:"C#", rate:4},
+         {name:"C#", rate:5},
          {name:"PHP",rate:3},
          {name:"Python",rate:3},
          {name:"Java",rate:3},
-         {name:"Apex",rate:3},
-         {name:"C",rate:3},
-         {name:"C++",rate:3},
-         {name:"TypeScript",rate:3},
-         {name:"JavaScript",rate:3},
-         {name:"SEO",rate:3},
-         {name:"SalesForce",rate:3},
-         {name:"Oracle",rate:3},
-         {name:"MySQL",rate:3},
-         {name:"Microsoft SQL Server",rate:3},
-         {name:"MongoDB",rate:3},
-         {name:"Photoshop",rate:3},
-         {name:"Photoshop",rate:3},
+         {name:"JS",rate:4},
+         {name:"SEO",rate:4},
+         {name:"SF",rate:5},
          
 
      ]
@@ -259,11 +244,60 @@ function toggle_visibility(id) {
              element.appendChild(star);
          }
      }
-window.onload=()=>{
-    var skill= document.getElementsByClassName('skill');
-    for(var i = 0; i < skillRate.length; i++){
-        Stars(skill[i],skillRate[i].rate)
-}
+    window.onload=()=>{
+        var skill= document.getElementsByClassName('skill');
+        for(var i = 0; i < skillRate.length; i++){
+            Stars(skill[i],skillRate[i].rate)
+    }
+
+    var canvas,context, canvaso, cotexto;
+    canvaso = document.getElementById("chart");
+    context = canvaso.getContext("2d")
+    context.lineWidth = 5;
+
+    let x= 110, y = 328;
+    let stepX = 0, stepY = 0;
+
+    for(let i = 0;i<skillRate.length;i++){
+        context.fillStyle = "yellow" ;
+        context.fillRect(x+stepX,y-skillRate[i].rate*25,40,skillRate[i].rate*25);
+        stepX += 70
+    }
+
+    context.fillStyle = "#000000"
+    context.font = "bold 17px arial"
+
+    context.fillText("Rate",45,100)
+
+    for(let i =0;i<5;i++){
+        context.fillText(i+1,65,315-27*i);
+    }
+
+    context.fillText("Skill",590,350)
+
+    context.font = "13px arial"
+    for(let i = 0;i<skillRate.length;i++){
+        context.fillText(skillRate[i].name,115+70*i,350);
+    }
+
+
+
+    context.strokeStyle = "#00000";
+    context.beginPath();
+    context.moveTo(90,90);
+    context.lineTo(90,332);
+    context.stroke();
+    context.closePath();
+
+    context.strokeStyle = "#00000";
+    context.beginPath();
+    context.moveTo(90,330);
+    context.lineTo(600,328);
+    context.stroke();
+    context.closePath();
+
+
+
 }
 
  </script>
