@@ -71,3 +71,24 @@ opacity: 0;
 transform: scale(0);
 transition: .6s ease opacity,.6s ease transform;
 }
+
+  
+  .tooltip-item {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .tooltip-item:after {
+    content: attr(data-message);
+    position: absolute;
+    left: 105%;
+    white-space: nowrap;
+    display: none;
+    font-size: 1rem;
+    background-color: rgba(230, 230, 230, 0.6);
+    padding: 10px 20px;
+    border-radius: 16px;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    font-weight: normal;
+  }
+  

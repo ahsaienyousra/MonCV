@@ -134,20 +134,27 @@
         <div class="competences partie">
             <h1><strong>Competences</strong></h1>
             <div>
-                <h3>Langages de programmation:</h3>
-                <p>C#, Php, Python, Java, Apex, C, C++, TypeScript, JavaScript</p>
-            </div>
-            <div>
-                <h3>Marketing digital :</h3>
-                <p>SEO, SalesForce</p>
-            </div>
-            <div>
-                <h3>Logiciels de design :</h3>
-                <p>Photoshop, Illustrator</p>
-            </div>
-            <div>
-                <h3>Bases de données</h3>
-                <p>Oracle, MySQL, Microsoft SQL Server, MongoDB, SQLite</p>
+                <ul>
+                    <li class="tooltip-item" data-message="C#">C#</li>
+                    <li class="tooltip-item" data-message="php">Php</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>Apex</li>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>TypeScript</li>
+                    <li>JavaScript</li>
+                    <li>SEO</li>
+                    <li>SalesForce</li>
+                    <li>Oracle</li>
+                    <li>MySQL</li>
+                    <li>Microsoft SQL Server</li>
+                    <li>MongoDB</li>
+                    <li>Photoshop</li>
+                    <li>Illustrator</li>
+                </ul>
+                
+                
             </div>
         </div>
     </section>
@@ -193,6 +200,33 @@ function toggle_visibility(id) {
         divsToHide[i].style.transform='scale(0)';
     }
     }
+    
+    
+    (function(selector, horizontalOffset, verticalOffset) {
+        var items;
+        
+        selector = selector || '.tooltip';
+        horizontalOffset = horizontalOffset || 5;
+        verticalOffset = verticalOffset || 5;
+        
+        items = document.querySelectorAll(selector);
+        items = Array.prototype.slice.call(items);
+        
+        items.forEach(function(item) {
+          // Every time the pointer moves over the element the 
+          //  CSS-rule in overwritten with new values for 
+          //  top and left.
+          item.addEventListener('mousemove', function(e) {
+            let countCssRules = document.styleSheets[0].cssRules.length;
+            let newRule = selector +
+              ':hover:after { display: block; ' + 
+                             'left: ' + (e.offsetX + horizontalOffset) + 'px; ' +
+                             'top: ' +  (e.offsetY + verticalOffset) + 'px; }';
+            
+            document.styleSheets[0].insertRule(newRule, countCssRules);
+          });
+        });
+      })('.tooltip-item', 10, 5);
     </script>
 </body>
 </html>
