@@ -115,11 +115,6 @@ margin: 32px;
 }
 
 
-/* footer ul li{
-    display: inline;
-	list-style: none;
-} */
-
 footer ul{
     list-style: none;
     display: flex;
