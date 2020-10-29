@@ -38,40 +38,40 @@
         <section>
       <div class="experiences partie">
           <h1><strong>Experiences professionnelles</strong></h1>
-          <div>
 
-            <span><button type="button" onclick="afficherMasquer(id)" >+</button>
-              <h1>&nbsp;   Développeur salesforce</h1></span>
-            <div>
+
+        <div>
+            <span><button type="button" onclick="toggle_visibility('SF_dev');">+</button>
+              <h1>&nbsp;Développeur salesforce</h1></span>
+            <div id="SF_dev" class="details">
+                <h4>Juill 2019 - Mai 2020</h4>
               <h4>DATA RESEARCH And RESULTS</h4>
-              <h4>Juill 2019 - Mai 2020</h4>
+              
               <p>adapter l’outil Salesforce à des besoins spécifiques par du code le langage Apex pour la partie back officeet VisualForce et Lightning pour le front-office </p>
             </div>
         </div>
 
         <div>
-            <div>
-                <h3>Responsable SEO et contenu</h3>
-              <h4> YOUPEL </h4>
-              <h4>Juill - sept 2018</h4>
-
-            </div>
-            <div>
+                <span><button type="button" onclick="toggle_visibility('SEO');">+</button>
+                <h1>&nbsp;Responsable SEO et contenu</h1></span>
+                <div id="SEO" class="details">
+                <h4> YOUPEL </h4>
+                <h4>Juill - sept 2018</h4>
                 <p>Responsable SEO du site et plus globalement de la stratégie de production de contenu : recherche de mots clefs, réécriture, contrôle qualité du contenu publié, etc.</p>
             </div>
         </div>
-        <div>
-            <div>
-                <h3> Développeur web</h3>
-              <h4>  INOVA COMMUNICATION </h4>
-              <h4>Avr – Juin 2018</h4>
 
-            </div>
-            <div>
+
+        <div>
+            <span><button type="button" onclick="toggle_visibility('dev_web');">+</button>
+                <h1>&nbsp;Développeur web</h1></span>
+                <div id="dev_web" class="details">
+                <h4>  INOVA COMMUNICATION </h4>
+              <h4>Avr – Juin 2018</h4>
                 <p>Creer une plateforme e-commerce</p>
             </div>
         </div>
-      </div>
+
     </section>
     <section>
         <div class="formation partie">
@@ -164,5 +164,35 @@
         <li><a href="https://www.facebook.com/yousra.ahsaien"><i class="fa fa-facebook-square" style="font-size:48px;color:blue"></i></a></li>
     </footer>
 </div>
+
+<script>
+    
+function toggle_visibility(id) {
+       HideAllDiv();
+       var e = document.getElementById(id);
+       if(e.style.display == 'block'){
+          e.style.opacity=0;
+          e.style.transform = 'scale(0)';
+          window.setTimeout(function(){
+      e.style.display = 'none'; },700);
+        }
+       else{
+        e.style.display = 'block';
+        window.setTimeout(function(){
+        e.style.opacity = 1;
+        e.style.transform = 'scale(1)';},0);
+    }
+          
+    }
+
+    function HideAllDiv() {
+        var divsToHide = document.getElementsByClassName("details"); 
+    for(var i = 0; i < divsToHide.length; i++){
+        divsToHide[i].style.display = "none"; 
+        divsToHide[i].style.opacity=0;
+        divsToHide[i].style.transform='scale(0)';
+    }
+    }
+    </script>
 </body>
 </html>

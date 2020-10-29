@@ -62,3 +62,12 @@ h1{
     padding: 2em;
     border: 1px solid black;
 }
+.details{
+display: none;
+background-color: #f0eeee;
+margin-right: auto ;
+padding: 1em;
+opacity: 0;
+transform: scale(0);
+transition: .6s ease opacity,.6s ease transform;
+}
